@@ -1,0 +1,9 @@
+.hover-color {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.hover-color:hover {
+  color: #FF4433;
+  cursor: pointer;
+}
