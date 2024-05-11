@@ -55,11 +55,11 @@ Streamlined party planning for Event Elite (party event management).
    cd <repository_name>
    Backend Setup:
 
-Navigate to the backend directory.
-Configure the database settings in application.properties.
-Run the Spring Boot application: ./mvnw spring-boot:run
+ - Navigate to the backend directory.
+ - Configure the database settings in application.properties.
+ - Run the Spring Boot application: ./mvnw spring-boot:run
 
 3.**Usage**
-Login with your administrator credentials.
-Navigate through the system using the user-friendly interface.
-Manage clients, plan events, and handle guest registrations.
+  - Login with your administrator credentials.
+  - Navigate through the system using the user-friendly interface.
+  - Manage clients, plan events, and handle guest registrations.
