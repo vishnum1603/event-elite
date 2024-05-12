@@ -53,8 +53,8 @@ Streamlined party planning for Event Elite (party event management).
    ```bash
    git clone <repository_url>
    cd <repository_name>
-   Backend Setup:
 
+  Backend Setup:
  - Navigate to the backend directory.
  - Configure the database settings in application.properties.
  - Run the Spring Boot application: ./mvnw spring-boot:run
