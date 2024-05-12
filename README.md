@@ -51,13 +51,12 @@ Streamlined party planning for Event Elite (party event management).
 2. **Clone the repository:**
 
    ```bash
-   git clone <repository_url>
-   cd <repository_name>
-
-  Backend Setup:
- - Navigate to the backend directory.
- - Configure the database settings in application.properties.
- - Run the Spring Boot application: ./mvnw spring-boot:run
+   git clone https://github.com/vishnum1603/event-elite.
+   cd <directory>
+   Backend Setup:
+   - Navigate to the backend directory.
+   - Configure the database settings in application.properties.
+   - Run the Spring Boot application: ./mvnw spring-boot:run
 
 3.**Usage**
   - Login with your administrator credentials.
