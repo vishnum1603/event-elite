@@ -16,10 +16,10 @@ Streamlined party planning for Event Elite (party event management).
 
 - **Frontend:**
   - React JS
-  - Material UI for user interface design
+  - Material UI and Bootstrap UI for user interface design
 
 - **State Management:**
-  - Redux
+  - Context
 
 - **Backend:**
   - Spring Security for secure user access
