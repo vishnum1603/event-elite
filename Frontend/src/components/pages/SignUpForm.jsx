@@ -7,7 +7,6 @@ import { createTheme } from "@mui/material/styles";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.min.css";
-import { signup } from "../services/Api";
 
 const defaultTheme = createTheme();
 export default function SignUpForm() {
@@ -50,8 +49,6 @@ export default function SignUpForm() {
     }
     if (isValid) {
       try {
-        await signup(formData);
-        console.log("Form is valid, submit data:", formData);
         toast.success("Welcome! You have successfully signed up.", {
           position: "top-center",
           autoClose: 2000,
