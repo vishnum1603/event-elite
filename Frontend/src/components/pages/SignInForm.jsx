@@ -9,7 +9,6 @@ import { createTheme } from "@mui/material/styles";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.min.css";
-import { Login } from "../services/Api";
 
 const defaultTheme = createTheme();
 
@@ -49,43 +48,37 @@ export default function SignInSide() {
     setFormErrors(newErrors);
 
     if (isValid) {
-      try {
-        console.log("Form is valid, submitting data:", formData);
-        setFormData({
-          email: "",
-          password: "",
-        });
+      console.log("Form is valid, submitting data:", formData);
 
-        const userData = await Login(formData);
+      // Simulate admin login check (mocked check)
+      const isAdmin = formData.email === "admin@example.com";
 
-        if (userData && userData.token) {
-          if (userData.role === "ADMIN") {
-            toast.success("You have successfully signed in.", {
-              position: "top-center",
-              autoClose: 2000,
-              onClose: () => {
-                setTimeout(() => {
-                  navigate("/admin-dashboard");
-                }, 1000);
-              },
-            });
-          } else {
-            toast.success("You have successfully signed in.", {
-              position: "top-center",
-              autoClose: 2000,
-              onClose: () => {
-                setTimeout(() => {
-                  navigate("/home");
-                }, 1000);
-              },
-            });
-          }
-        }
-      } catch (error) {
-        console.error("Error occurred while logging in:", error);
-        toast.error("Invalid Email or Password!!!", {
+      // Clear the form after submission
+      setFormData({
+        email: "",
+        password: "",
+      });
+
+      // Navigate based on user role
+      if (isAdmin) {
+        toast.success("You have successfully signed in as Admin.", {
           position: "top-center",
           autoClose: 2000,
+          onClose: () => {
+            setTimeout(() => {
+              navigate("/admin-dashboard");
+            }, 1000);
+          },
+        });
+      } else {
+        toast.success("You have successfully signed in.", {
+          position: "top-center",
+          autoClose: 2000,
+          onClose: () => {
+            setTimeout(() => {
+              navigate("/home");
+            }, 1000);
+          },
         });
       }
     } else {
